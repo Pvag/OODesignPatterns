@@ -1,11 +1,15 @@
 public class Driver {
     public static void main(String[] args) {
-        Duck duckie = new SuperDuck(); // polymorphism
-        System.out.println("* First, let's ask our SuperDuck to fly:");
-        duckie.performFly();
+        Duck duckieCool = new SuperDuck(); // polymorphism
+        System.out.println("* First, let's ask our 'SuperDuck' to fly:");
+        duckieCool.performFly();
         System.out.println("* Then, let's change at runtime her fly behavior to 'FlyEasy':");
-        duckie.setFlyBehavior(new FlyEasy());
+        duckieCool.setFlyBehavior(new FlyEasy());
         System.out.println("* Now, let's ask our duck to fly, again:");
-        duckie.performFly();
+        duckieCool.performFly();
+        Duck easyDuck = new CalmDuck();
+        System.out.println("* Now I instantiate a 'CalmDuck' and ask her to perform fly and quack:");
+        easyDuck.performFly();
+        easyDuck.performQuack();
     }
 }
